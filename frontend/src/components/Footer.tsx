@@ -1,4 +1,4 @@
-import { Heart } from 'lucide-react';
+import { Heart } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,12 +11,10 @@ export function Footer() {
               Sweet<span className="text-primary">Shop</span>
             </span>
           </div>
-          
+
           <p className="flex items-center gap-1 text-sm text-muted-foreground">
-  Made with <strong>Manoj</strong> for sweet lovers everywhere
-</p>
-
-
+            Made with <strong>Alias</strong> for sweet lovers everywhere
+          </p>
 
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Sweet Shop. All rights reserved.
