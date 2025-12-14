@@ -1,0 +1,20 @@
+import { Request, Response, NextFunction } from 'express';
+import jwt from 'jsonwebtoken';
+import { AppError } from '../utils/AppError';
+import { config } from '../config/env';
+
+export const authenticate = (req: Request, res: Response, next: NextFunction) => {
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+
+  if (!token) {
+    return res.status(401).json({ message: 'Authentication required' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, config.jwtSecret);
+    (req as any).user = decoded;
+    next();
+  } catch (error) {
+    return res.status(401).json({ message: 'Invalid token' });
+  }
+};
