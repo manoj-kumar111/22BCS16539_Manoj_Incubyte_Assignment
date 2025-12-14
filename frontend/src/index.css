@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sweet Shop Design System - All colors in HSL */
+
+@layer base {
+  :root {
+    /* Candy-inspired color palette */
+    --background: 30 50% 98%;
+    --foreground: 20 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 25% 20%;
+
+    /* Strawberry pink primary */
+    --primary: 340 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Mint secondary */
+    --secondary: 160 45% 90%;
+    --secondary-foreground: 160 50% 25%;
+
+    /* Cream/vanilla muted */
+    --muted: 35 30% 92%;
+    --muted-foreground: 20 15% 45%;
+
+    /* Mint accent */
+    --accent: 160 50% 85%;
+    --accent-foreground: 160 55% 25%;
+
+    /* Raspberry destructive */
+    --destructive: 350 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 340 65% 55%;
+
+    --radius: 1rem;
+
+    /* Custom sweet shop tokens */
+    --candy-pink: 340 65% 55%;
+    --candy-pink-light: 340 70% 92%;
+    --mint-green: 160 50% 70%;
+    --mint-green-light: 160 45% 92%;
+    --chocolate: 20 45% 25%;
+    --vanilla: 40 35% 95%;
+    --caramel: 35 70% 55%;
+    --lemon: 50 90% 65%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 70% 92%) 0%, hsl(160 45% 92%) 50%, hsl(40 35% 95%) 100%);
+    --gradient-candy: linear-gradient(135deg, hsl(340 65% 55%) 0%, hsl(350 70% 65%) 100%);
+    --gradient-mint: linear-gradient(135deg, hsl(160 50% 70%) 0%, hsl(170 55% 60%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(340 65% 55% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(20 25% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(340 65% 55% / 0.2);
+
+    --sidebar-background: 30 50% 98%;
+    --sidebar-foreground: 20 25% 20%;
+    --sidebar-primary: 340 65% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 45% 90%;
+    --sidebar-accent-foreground: 160 50% 25%;
+    --sidebar-border: 30 25% 88%;
+    --sidebar-ring: 340 65% 55%;
+  }
+
+  .dark {
+    --background: 20 20% 10%;
+    --foreground: 30 30% 95%;
+
+    --card: 20 20% 14%;
+    --card-foreground: 30 30% 95%;
+
+    --popover: 20 20% 14%;
+    --popover-foreground: 30 30% 95%;
+
+    --primary: 340 65% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 30% 20%;
+    --secondary-foreground: 160 40% 85%;
+
+    --muted: 20 15% 20%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 160 35% 25%;
+    --accent-foreground: 160 40% 85%;
+
+    --destructive: 350 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 22%;
+    --input: 20 15% 22%;
+    --ring: 340 65% 60%;
+
+    --candy-pink: 340 65% 60%;
+    --candy-pink-light: 340 40% 25%;
+    --mint-green: 160 45% 50%;
+    --mint-green-light: 160 30% 20%;
+    --chocolate: 20 30% 75%;
+    --vanilla: 40 20% 18%;
+    --caramel: 35 60% 50%;
+    --lemon: 50 80% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(20 20% 12%) 0%, hsl(20 20% 14%) 100%);
+    --gradient-candy: linear-gradient(135deg, hsl(340 65% 50%) 0%, hsl(350 60% 55%) 100%);
+    --gradient-mint: linear-gradient(135deg, hsl(160 45% 40%) 0%, hsl(170 50% 35%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(340 65% 50% / 0.3);
+
+    --sidebar-background: 20 20% 12%;
+    --sidebar-foreground: 30 30% 95%;
+    --sidebar-primary: 340 65% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 30% 20%;
+    --sidebar-accent-foreground: 160 40% 85%;
+    --sidebar-border: 20 15% 22%;
+    --sidebar-ring: 340 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-candy {
+    background: var(--gradient-candy);
+  }
+
+  .gradient-mint {
+    background: var(--gradient-mint);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}

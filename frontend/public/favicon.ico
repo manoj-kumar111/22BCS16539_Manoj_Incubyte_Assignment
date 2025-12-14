@@ -1,0 +1,45 @@
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="56" fill="#FDE2E4" />
+
+  <!-- Candy Wrapper Left -->
+  <path
+    d="M25 60 L10 50 L10 70 Z"
+    fill="#F9A8D4"
+  />
+
+  <!-- Candy Wrapper Right -->
+  <path
+    d="M95 60 L110 50 L110 70 Z"
+    fill="#F9A8D4"
+  />
+
+  <!-- Candy Body -->
+  <rect
+    x="25"
+    y="40"
+    width="70"
+    height="40"
+    rx="20"
+    fill="#FB7185"
+  />
+
+  <!-- Candy Stripes -->
+  <path
+    d="M40 40 L60 80"
+    stroke="#FFE4E6"
+    stroke-width="4"
+  />
+  <path
+    d="M60 40 L80 80"
+    stroke="#FFE4E6"
+    stroke-width="4"
+  />
+
+</svg>
